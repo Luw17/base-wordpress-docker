@@ -24,3 +24,4 @@ src/plugins/*
 !src/plugins/.gitkeep
 src/themes/*
 !src/themes/.gitkeep
+wp-content

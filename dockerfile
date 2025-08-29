@@ -1,8 +1,9 @@
 FROM wordpress:latest
 
-# Instala Xdebug
-RUN pecl install xdebug \
-    && docker-php-ext-enable xdebug
+RUN apt-get update && apt-get install -y \
+    git unzip libzip-dev \
+    && pecl install xdebug \
+    && docker-php-ext-enable xdebug \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copia config customizada
 COPY ./xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
