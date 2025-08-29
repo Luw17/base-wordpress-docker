@@ -16,6 +16,7 @@ services:
     volumes:
       - ./src/plugins:/var/www/html/wp-content/plugins
       - ./src/themes:/var/www/html/wp-content/themes
+      - ./src/mu-plugins:/var/www/html/wp-content/mu-plugins
       - ./uploads:/var/www/html/wp-content/uploads
     depends_on:
       - db
